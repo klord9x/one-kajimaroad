@@ -14,7 +14,7 @@ jobs:
         FTP_SERVER: ${{ secrets.ftp_host }}
         FTP_USERNAME: ${{ secrets.ftp_user }}
         FTP_PASSWORD: ${{ secrets.ftp_password }}
-        LOCAL_DIR: ./build/
+        LOCAL_DIR: ./docs/
         REMOTE_DIR: /var/www/html/wp-content/plugins/simply-static/static-files/
         METHOD: sftp
         PORT: ${{ secrets.ftp_port }}
