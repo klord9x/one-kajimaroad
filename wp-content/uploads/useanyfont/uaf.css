@@ -1,0 +1,16 @@
+				@font-face {
+					font-family: 'handel-gothic';
+					src: url('/wp-content/uploads/useanyfont/4200Handel-Gothic.woff2') format('woff2'),
+						url('/wp-content/uploads/useanyfont/4200Handel-Gothic.woff') format('woff');
+					font-display: auto;
+				}
+
+				.handel-gothic{font-family: 'handel-gothic' !important;}
+
+						.exterior-post #Logo text{
+					font-family: 'handel-gothic' !important;
+				}
+						.exterior-post #Logo-2 text{
+					font-family: 'handel-gothic' !important;
+				}
+		
