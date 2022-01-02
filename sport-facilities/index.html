@@ -563,7 +563,23 @@ padding:0;;
         url.hostname = 'www.' + hostname;
 
         return url.href;
-    }</script> <style type="text/css">@media screen and (max-width: 640px) {
+    }
+	
+	//TODO: call php
+	var subdomain =  window.location.host.split('.')[1] ? window.location.host.split('.')[0] : false;
+	if (subdomain == 'm') {
+		jQuery(function($) {
+			$.ajaxSetup({
+				beforeSend: function(jqXHR, settings) {
+					if (settings.url.includes('.php')) {
+						var root = window.location.origin.replace('m.', 'www.');
+						settings.url = root + settings.url;
+						settings.crossDomain = true;
+					}
+				}
+			});
+		});
+	}</script> <style type="text/css">@media screen and (max-width: 640px) {
                     #wpfront-scroll-top-container {
                         visibility: hidden;
                     }
